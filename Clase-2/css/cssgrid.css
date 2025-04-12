@@ -1,0 +1,131 @@
+/* Sección de demostración de CSS Grid */
+.grid-demo {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #333;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Títulos */
+h1 {
+    color: #fff;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    color: #ff2a68;
+    margin-top: 40px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* Diseño básico de Grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.grid-item {
+    background-color: #00bcd4;
+    color: white;
+    padding: 20px;
+    font-size: 1.2rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    width: 100%;
+    cursor: pointer;
+}
+
+.grid-item:hover {
+    transform: translateY(-10px);
+    background-color: #ff2a68;
+}
+
+/* Espaciado y Alineación */
+.grid-container-alignment {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.grid-container-alignment .grid-item {
+    background-color: #ff2a68;
+    color: #fff;
+    padding: 20px;
+    font-size: 1.5rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.grid-container-alignment .grid-item:hover {
+    transform: translateY(-10px);
+    background-color: #ff8c00;
+}
+
+/* Grid con diferentes tamaños de columna */
+.grid-container-sizes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header header header"
+        "content sidebar sidebar"
+        "footer footer footer";
+    gap: 20px;
+}
+
+.grid-container-sizes .grid-item:nth-child(1) {
+    grid-area: header;
+    background-color: #4caf50;
+}
+
+.grid-container-sizes .grid-item:nth-child(2) {
+    grid-area: content;
+    background-color: #ff2a68;
+}
+
+.grid-container-sizes .grid-item:nth-child(3) {
+    grid-area: sidebar;
+    background-color: #00bcd4;
+}
+
+.grid-container-sizes .grid-item:nth-child(4) {
+    grid-area: footer;
+    background-color: #9b59b6;
+}
+
+/* Efectos de Hover */
+.grid-container .grid-item,
+.grid-container-alignment .grid-item,
+.grid-container-sizes .grid-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.grid-container .grid-item:hover,
+.grid-container-alignment .grid-item:hover,
+.grid-container-sizes .grid-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.4);
+    background-color: #ff8c00;
+}
+
+/* Sombra de contenedor grid para dar dinamismo */
+.grid-container, .grid-container-alignment, .grid-container-sizes {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+}
+

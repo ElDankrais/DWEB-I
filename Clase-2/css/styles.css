@@ -1,0 +1,125 @@
+/* Estilos para el contenedor principal */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 2rem;
+}
+
+/* Formulario */
+form {
+    background-color: white;
+    color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* Campos de entrada */
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input,
+form select,
+form textarea,
+form button {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Estilo del botón */
+form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+/* Mensajes de error */
+.error-message {
+    color: #d9534f;
+    font-size: 0.9rem;
+    display: none;
+}
+
+/* Mostrar mensaje de error si el campo es inválido */
+input:invalid + .error-message,
+textarea:invalid + .error-message {
+    display: block;
+}
+
+/* Estilos para los campos con error */
+input:invalid,
+select:invalid,
+textarea:invalid {
+    border-color: #d9534f;
+}
+
+input:focus:invalid,
+select:focus:invalid,
+textarea:focus:invalid {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+input:valid,
+textarea:valid {
+    border-color: #28a745; /* Verde para campos válidos */
+}
+
+input:focus:valid,
+textarea:focus:valid {
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+}
+
+/* Sección de agradecimiento */
+.thank-you-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.thank-you-section h1 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.thank-you-section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.thank-you-section a {
+    color: #fff;
+    text-decoration: none;
+    background-color: #4CAF50;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.thank-you-section a:hover {
+    background-color: #45a049;
+}

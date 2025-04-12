@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con Validaciones HTML5</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .flexbox-demo {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #333;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Títulos */
+        h1 {
+            color: #fff;
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            color: #ff2a68;
+            margin-top: 40px;
+            font-size: 2rem;
+            font-weight: bold;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Estilos para los contenedores flex */
+        .flex-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+            transition: all 0.3s ease;
+        }
+
+        .flex-container:hover {
+            transform: scale(1.05);
+        }
+
+        /* Caja con color vibrante */
+        .flex-container .box {
+            background-color: #00bcd4;
+            color: #fff;
+            padding: 20px;
+            font-size: 1.2rem;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            width: 120px;
+        }
+
+        .flex-container .box:hover {
+            transform: translateY(-10px);
+            background-color: #ff2a68;
+        }
+
+        /* Justificación de espacio entre elementos */
+        .justify-space-between {
+            justify-content: space-between;
+        }
+
+        /* Alineación de elementos en el centro */
+        .align-items-center {
+            align-items: center;
+            height: 200px; /* Altura para alinear verticalmente */
+        }
+
+        /* Flex Wrap: Cuando el contenedor no tiene suficiente espacio */
+        .wrap {
+            flex-wrap: wrap;
+        }
+
+        /* Añadido para la página */
+        p {
+            font-size: 1.2rem;
+            margin-top: 20px;
+            color: #fff;
+        }
+
+        /* Efecto para las cajas cuando se están alineando */
+        .flex-container .box {
+            transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+            cursor: pointer;
+        }
+
+        /* Sombra de contenedor flex para dar dinamismo */
+        .flex-container {
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <ul>
+        <li><a href="./forms.html">Formulario</a></li>
+        <li><a href="./flexbox.html">Flexbox</a></li>
+        <li><a href="./cssgrid.html">CSS Grid</a></li>
+    </ul>
+</nav>
+
+<main>
+    <section class="flexbox-demo">
+        <h1>Demostración de Flexbox</h1>
+        <p>Explora cómo Flexbox puede ayudarte a crear diseños modernos y adaptativos. A continuación, mostramos algunos ejemplos clave de Flexbox.</p>
+
+        <!-- Contenedor Flexbox 1: Alineación Horizontal -->
+        <h2>1. Alineación Horizontal</h2>
+        <div class="flex-container">
+            <div class="box">Caja 1</div>
+            <div class="box">Caja 2</div>
+            <div class="box">Caja 3</div>
+        </div>
+
+        <!-- Contenedor Flexbox 2: Justificación del espacio -->
+        <h2>2. Justificación del Espacio</h2>
+        <div class="flex-container justify-space-between">
+            <div class="box">Caja 1</div>
+            <div class="box">Caja 2</div>
+            <div class="box">Caja 3</div>
+        </div>
+
+        <!-- Contenedor Flexbox 3: Alineación Vertical -->
+        <h2>3. Alineación Vertical</h2>
+        <div class="flex-container align-items-center">
+            <div class="box">Caja 1</div>
+            <div class="box">Caja 2</div>
+            <div class="box">Caja 3</div>
+        </div>
+
+        <!-- Contenedor Flexbox 4: Flex Wrap -->
+        <h2>4. Flex Wrap (Corte de línea)</h2>
+        <div class="flex-container wrap">
+            <div class="box">Caja 1</div>
+            <div class="box">Caja 2</div>
+            <div class="box">Caja 3</div>
+            <div class="box">Caja 4</div>
+            <div class="box">Caja 5</div>
+        </div>
+    </section>
+</main>
+
+
+</body>
+</html>

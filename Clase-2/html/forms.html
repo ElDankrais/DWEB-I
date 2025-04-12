@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con Validaciones HTML5</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <ul>
+        <li><a href="./forms.html">Formulario</a></li>
+        <li><a href="./flexbox.html">Flexbox</a></li>
+        <li><a href="./cssgrid.html">CSS Grid</a></li>
+    </ul>
+</nav>
+
+<main>
+    <section id="form">
+        <h1>Formulario de Contacto</h1>
+
+        <form action="./thanks.html" method="POST">
+            <!-- Nombre -->
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre" minlength="3"
+                   maxlength="50">
+            <div class="error-message alert required min">El nombre es obligatorio y debe tener al menos 3 caracteres.</div>
+
+            <!-- Correo Electrónico -->
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" required placeholder="ejemplo@dominio.com">
+            <div class="error-message">Por favor ingresa un correo electrónico válido.</div>
+
+            <!-- Contraseña -->
+            <label for="contraseña">Contraseña</label>
+            <input type="password" id="contraseña" name="contraseña" required placeholder="Ingresa tu contraseña"
+                   minlength="8"
+                   pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="test">
+            <div class="error-message">La contraseña debe tener al menos 8 caracteres, incluyendo mayúsculas, minúsculas
+                y números.
+            </div>
+
+            <!-- Fecha de Nacimiento -->
+            <label for="fecha-nacimiento">Fecha de nacimiento</label>
+            <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
+            <div class="error-message">Por favor ingresa una fecha válida.</div>
+
+            <!-- Teléfono -->
+            <label for="telefono">Número de teléfono</label>
+            <input type="tel" id="telefono" name="telefono" required placeholder="(+XX) 123-456-7890"
+                   pattern="^\(\+[0-9]{2}\) [0-9]{3}-[0-9]{3}-[0-9]{4}$">
+            <div class="error-message">Por favor ingresa un número de teléfono en el formato (+XX) 123-456-7890.</div>
+
+            <!-- Género -->
+            <label for="genero">Género</label>
+            <select id="genero" name="genero" required>
+                <option value="" disabled selected>Selecciona tu género</option>
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+                <option value="otro">Otro</option>
+            </select>
+
+            <!-- Comentarios -->
+            <label for="comentarios">Comentarios</label>
+            <textarea id="comentarios" name="comentarios" placeholder="Escribe tus comentarios aquí" minlength="10"
+                      maxlength="500"></textarea>
+            <div class="error-message">Los comentarios deben tener al menos 10 caracteres y no más de 500.</div>
+
+            <!-- Aceptar términos y condiciones -->
+            <label>
+                <input type="checkbox" id="terminos" name="terminos" required>
+                Acepto los términos y condiciones
+            </label>
+            <div class="error-message">Debes aceptar los términos y condiciones.</div>
+
+            <!-- Botón de envío -->
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+</main>
+
+
+</body>
+</html>
