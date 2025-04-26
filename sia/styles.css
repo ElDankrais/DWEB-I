@@ -1,0 +1,159 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background: #f0f4f8;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* NAVBAR */
+  .navbar {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #4a90e2;
+  }
+  
+  /* HEADER */
+  header {
+    background-color: #4a90e2;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  /* MAIN */
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+  
+  /* SECCIÓN DE AVANCE */
+  /* Avance Section */
+  .avance {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+    justify-items: center;
+  }
+  
+  .avance__card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+    
+    /* ✨ Animación al cargar */
+    animation: aparecer 2s ease forwards;
+  }
+  
+  /* Efecto al hacer hover */
+  .avance__card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .avance__title {
+    background-color: #4a90e2;
+    color: white;
+    font-size: 1.2rem;
+    padding: 1rem;
+  }
+  
+  .avance__image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* ANIMACIONES */
+  @keyframes aparecer {
+    from {
+      transform: scale(0);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  
+  /* FOOTER */
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  /* ESTILOS PÁGINA EN CONSTRUCCIÓN */
+  .construccion {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .img-construccion {
+    width: 300px;
+    max-width: 90%;
+    margin-top: 2rem;
+  }
+  
+  /* RESPONSIVE DESIGN */
+  @media (max-width: 768px) {
+    .avance {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .avance {
+      grid-template-columns: 1fr; /* En móviles muy pequeños, 1 por fila */
+    }
+  }
+  
