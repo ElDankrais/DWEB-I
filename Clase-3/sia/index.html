@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mi Avance Web</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="index.js"></script>
+  <script src="index.js" defer></script>
 </head>
 <body>
 
@@ -25,56 +25,17 @@
 
   <!-- MAIN -->
   <main>
-    <section class="avance">
-        <div class="avance__card">
-          <h2 class="avance__title">10% Completado</h2>
-          <img src="img/10.jpg" alt="Avance 10%" class="avance__image">
-        </div>
-      
-        <div class="avance__card">
-          <h2 class="avance__title">20% Completado</h2>
-          <img src="img/20.jpg" alt="Avance 20%" class="avance__image">
-        </div>
-      
-        <div class="avance__card">
-          <h2 class="avance__title">30% Completado</h2>
-          <img src="img/30.jpg" alt="Avance 30%" class="avance__image">
-        </div>
-        <div class="avance__card">
-            <h2 class="avance__title">40% Completado</h2>
-            <img src="img/40.jpg" alt="Avance 40%" class="avance__image">
-        </div>
-    
-        <div class="avance__card">
-            <h2 class="avance__title">50% Completado</h2>
-            <img src="img/50.jpg" alt="Avance 50%" class="avance__image">
-        </div>
-    
-        <div class="avance__card">
-            <h2 class="avance__title">60% Completado</h2>
-            <img src="img/60.jpg" alt="Avance 60%" class="avance__image">
-        </div>
+    <section class="intro">
+      <h1 class="intro__title">Salvando al SIA de decaer más</h1>
+      <p class="intro__text">
+        Ingresa un valor entre 0 y 100. De inmediato el "DNINFOA" calculará tu avance a través de "nachito", el estudiante con esperanzas y sueños
+      </p>
 
-        <div class="avance__card">
-            <h2 class="avance__title">70% Completado</h2>
-            <img src="img/70.jpg" alt="Avance 70%" class="avance__image">
-        </div>
-
-        <div class="avance__card">
-            <h2 class="avance__title">80% Completado</h2>
-            <img src="img/80.jpg" alt="Avance 80%" class="avance__image">
-        </div>
-
-        <div class="avance__card">
-            <h2 class="avance__title">90% Completado</h2>
-            <img src="img/90.jpg" alt="Avance 90%" class="avance__image">
-        </div>
-
-        <div class="avance__card">
-            <h2 class="avance__title">100% Completado</h2>
-            <img src="img/100.jpg" alt="Avance 100%" class="avance__image">
-        </div>
+      <input type="number" id="porcentajeInput" class="intro__input" placeholder="Ej: 53" min="0" max="100">
+      <button id="mostrarBtn" class="intro__button">Mostrar avance</button>
     </section>
+
+    <section class="resultado"></section>
   </main>
 
   <!-- FOOTER -->
