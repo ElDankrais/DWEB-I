@@ -1,0 +1,113 @@
+body{
+	background-color:#000000;
+}
+.box{
+    background-color:antiquewhite;
+    margin-top: 100px;
+    text-align: center;
+    font-family: courier New ;
+    padding-top: 30px;
+    
+}
+
+#new:hover{
+    cursor: pointer;
+    
+}
+
+#new:hover .icon{
+    padding-right: 7px;
+    transition: 0.15s;
+    transition-timing-function: ease-in;
+    
+}
+
+.player-0{
+    padding-bottom: 60px;
+}
+
+.player-1{
+    padding-bottom: 60px;
+}
+
+.score-0{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.score-1{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.current-box{
+    background-color: crimson;
+    margin: auto;
+    width: 30%;
+    color: aliceblue;
+    padding: 7px;
+}
+
+.dice-box img{
+    height: 80px;
+    width: 80px;
+    margin-bottom: 60px;
+}
+
+.dice-box{
+    margin-top: 70px;
+}
+
+#rotate{
+    cursor: pointer;
+   
+}
+
+#rotate:hover .r-icon{
+     padding-right: 7px;
+    transition: 0.15s;
+    transition-timing-function: ease-in;
+}
+
+#hold {
+    cursor: pointer;
+   
+}
+
+#hold:hover .h-icon{
+     padding-right: 7px;
+    transition: 0.15s;
+    transition-timing-function: ease-in;
+}
+
+.player-0 i{
+    display: none;
+}
+
+.player-1 i{
+    display: none;
+}
+
+.active{
+    font-weight: 900;
+    color: firebrick;
+}
+
+.active i {
+    display: inline;
+    font-size: 17px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+ 
