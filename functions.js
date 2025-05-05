@@ -1,3 +1,4 @@
+import despedir from './module.js';
 function rollDice() {
     return Math.floor(Math.random() * 6) + 1;
 }
@@ -19,8 +20,6 @@ console.log(greet('Carlos', 'welcome to the class'));
 function bankRobbery() {
     const heroes = ['Batman', 'Profesor Super O', 'Rey Mysterio'];
     return function auxilio() {
-        this.heroes = 'Superman';
-        console.log(this);
         for (let i = 0; i < heroes.length; i++) {
             console.log(`SALVAME ${heroes[i]}`);
         }
@@ -37,16 +36,6 @@ console.log(square(5));
 
 bankRobbery()();
 
-//THIS
-
-this.a = 40;
-function alpha() {
-    console.log(this);
-    this.b = 90;
-    console.log(this);
-}
-
-alpha();
 
 //Objetos
 
@@ -90,16 +79,6 @@ const suma2 = (a, b) => {
     console.log('HOla');
     return a + b;
 }
-
-const obj2 = {
-    name: 'Carito',
-    age: 25,
-
-    despedir: () => console.log(`Adios ${this.name}`),
-}
-
-console.log(obj2.despedir());
-
 //PROLOG
 
 const movies = [
@@ -167,3 +146,7 @@ const lista = frutas.reduce((acc, fruta) => {
 }, {});
 
 console.log(lista);
+
+//
+
+console.log(despedir())

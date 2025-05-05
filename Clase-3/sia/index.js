@@ -4,6 +4,11 @@ const resultado = document.querySelector('.resultado');
 
 button.addEventListener('click', () => {
     const valor = Number(input.value);
+
+    if (isNaN(valor) || valor < 0 || valor > 100) {
+        resultado.innerHTML = `<p>Re F pa</p>`
+        return;
+    }
     
     let redondeado;
 
