@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Avance Web</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="index.js"></script>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">Sia 2.0</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="poke.html">Pokedex</a></li>
+    </ul>
+  </nav>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Mi Progreso en la Aventura en Sismetas</h1>
+  </header>
+
+  <!-- MAIN -->
+  <main class="main">
+    <section class="intro">
+      <h1 class="intro__title">Bienvenidos al SIA</h1>
+      <p class="intro__text">
+        Ingresa tu porcentaje de avance (0 a 100). Calcularemos la imagen correspondiente redondeando hacia arriba al múltiplo de 5 más cercano.
+      </p>
+  
+      <input type="number" id="porcentajeInput" class="intro__input" placeholder="Ej: 47" min="0" max="100">
+      <button id="mostrarBtn" class="intro__button">Mostrar avance</button>
+    </section>
+  
+    <section class="resultado" id="resultado"></section>
+  </main>
+  
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Hecho en la clase de Desarrollo Web</p>
+  </footer>
+
+</body>
+</html>
