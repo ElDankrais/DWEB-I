@@ -1,43 +1,29 @@
-const http = require('http');
 const express = require('express');
 const bodyParser = require('body-parser');
 
+const desiredPort = process.env.PORT ?? 3000;
+
 const app = express();
 
-const shopRoutes = require('./routes/starter-shop');
+const initialRoutes = require('./routes/starter-shop');
 const adminRoutes = require('./routes/starter-admin');
 
 app.use(bodyParser.urlencoded({extended: false}));
 
-const desiredPort = process.env.PORT ?? 3000;
-
-// app.use((req, res, next) => {
-//     console.log('Middleware 1');
-//     next();
-// });
-
-// app.use('/', (req, res, next) => {
-//     console.log('En el middleware inicial de la app');
-//     next();
+// app.get('/', (req, res) => {
+//     console.log('En el inicio de los tiempos');
+//     res.send('<form action="/creatives" method="POST"><input type="text" name="message"><button type="submit">Crear</button></form>')
 // })
 
-// app.use('/add-product', (req, res) => {
-//     console.log('En el middleware de productos');
-//     res.send('<form action="/product" method="POST"><input type="text" name="title"><button type="submit">Add Product</button></form>');
-// })
-
-// app.use('/product', (req, res) => {
-//     console.log(req.body)
+// app.post('/creatives', (req, res) => {
+//     console.log(req.body);
 //     res.redirect('/');
-// }
+// })
 
+//1. Crear las páginas - 
+//2. Lógica de negocio para index
+//3. Lógica de negocio para add-product
+
+app.use(initialRoutes);
 app.use('/admin', adminRoutes);
-app.use(shopRoutes);
-
-app.use((req, res) => {
-    res.status(404).send('<h1>Page not found</h1>');
-});
-
-app.listen(desiredPort, () => {
-    console.log(`Example app listening on port ${desiredPort}`)
-})
+app.listen(desiredPort, () => console.log('Escuchando en el puerto: ',desiredPort));

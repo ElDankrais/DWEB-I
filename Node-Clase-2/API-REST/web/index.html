@@ -37,8 +37,8 @@
 
         document.addEventListener('click', e => {
           if (e.target.matches('button')) {
-            const article = e.target.closest('article')
-            const id = article.dataset.id
+            const article = e.target.closest('article');
+            const id = article.dataset.id;
 
             fetch(`http://localhost:1234/movies/${id}`, {
               method: 'DELETE'
@@ -48,8 +48,7 @@
                   article.remove()
                 }
               })
-            }
-          
+          }
         })
       })
   </script>
