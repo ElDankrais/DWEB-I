@@ -17,6 +17,9 @@
   
   /* NAVBAR */
   .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #333;
     color: white;
     padding: 1rem 2rem;
@@ -88,16 +91,18 @@
   /*IMAGENES*/
 
   .gallery {
-
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30vw, 1fr));
+    padding: 16px;
+    gap: 20px;
+    align-items: stretch;
     .gallery__card {
         border-radius: 14px;
         overflow: hidden;
         border: 1px solid black;
-        width: 30vw;
-        transition: transform 1s ease;
 
         &:hover {
-            transform: translateY(-10px);
+            animation: chanci 5s ease;
         }
 
         img {
@@ -140,3 +145,26 @@
     margin-top: 2rem;
   }
   
+  @media (max-width: 480px) {
+    .gallery {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @keyframes chanci {
+    0% {
+      opacity: 0;
+    }
+
+    30% {
+      opacity: 0.2;
+    }
+
+    60% {
+      opacity: 0.5
+    }
+
+    100% {
+      opacity:1
+    }
+  }

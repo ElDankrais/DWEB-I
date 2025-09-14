@@ -82,32 +82,33 @@ h2 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
-    grid-template-areas:
+    grid-template-areas: 
         "header header header"
-        "content sidebar sidebar"
+        "main main sidebar"
         "footer footer footer";
     gap: 20px;
 }
 
 .grid-container-sizes .grid-item:nth-child(1) {
     grid-area: header;
-    background-color: #4caf50;
+    background-color: green;
 }
 
 .grid-container-sizes .grid-item:nth-child(2) {
-    grid-area: content;
-    background-color: #ff2a68;
+    grid-area: main;
+    background-color: rebeccapurple;
 }
 
 .grid-container-sizes .grid-item:nth-child(3) {
     grid-area: sidebar;
-    background-color: #00bcd4;
+    background-color: aquamarine;
 }
 
 .grid-container-sizes .grid-item:nth-child(4) {
     grid-area: footer;
-    background-color: #9b59b6;
+    background-color: violet;
 }
+
 
 /* Efectos de Hover */
 .grid-container .grid-item,
