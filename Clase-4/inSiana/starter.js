@@ -14,8 +14,28 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        resultado.innerHTML = obtenerImagen(valor);
+        try {
+           await delay();
+           spinner.style.display = "none";
+           resultado.innerHTML = obtenerImagen(valor);
+        } catch (error) {
+            resultado.innerHTML = `<p class="resultado__error">${error}</p>`;
+            spinner.style.display = "none"; 
+        }
     });
+
+    function delay() {
+        return new Promise((resolve, reject) => {
+            const delay = Math.random() * 6;
+            setTimeout(() => {
+                if (delay >= 4) {
+                    reject('Error: Timeout de tantos segundos');
+                } else {
+                    resolve();
+                }
+            }, delay * 1000);
+        })
+    }
 
     function obtenerImagen(valor){
         let redondeado;

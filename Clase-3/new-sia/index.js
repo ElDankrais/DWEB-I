@@ -341,10 +341,37 @@
 
 // llamar(dicc);
 
+import despedir from "../../module.js";
+
 document.addEventListener('DOMContentLoaded', () => {
   const input = document.querySelector('#porcentajeInput');
   const button = document.querySelector('#mostrarBtn');
   const resultado = document.querySelector('.resultado');
 
-  button.addEventListener('click', () => alert('Millosaurios'));
+  button.addEventListener('click', () => {
+    console.log(despedir());
+    const valor = +input.value;
+
+    if (!valor || valor < 0 || valor > 100) {
+      resultado.innerHTML = '<p> Error papu </p>';
+      return;
+    }
+    
+    let redondeado;
+
+    if (valor <= 5) {
+      redondeado = 5;
+    } else {
+      redondeado = Math.floor(valor / 5) * 5;
+    }
+
+    const imagenSrc = `img/${redondeado}.jpg`;
+
+    resultado.innerHTML = `
+    <div class="resultado__card">
+      <img src="${imagenSrc}" alt="Avance de ${redondeado}">
+    </div>
+    `
+
+  });
 })
