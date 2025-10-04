@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIA 2.0 - Pokedex</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="../dist/poke.js" type="module"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Sia 2.0</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="poke.html">Pokedex</a></li>
+    </ul>
+  </nav>
+
+  <main class="pokedex">
+    <h1 class="pokedex__title">Pokédex</h1>
+    <div class="pokedex__search">
+      <input type="text" id="pokemonInput" placeholder="Ingresa el nombre del Pokémon" class="pokedex__input">
+      <button id="buscarBtn" class="pokedex__button">Buscar</button>
+    </div>
+
+    <div class="pokemon-result" id="pokemonResult"></div>
+  </main>
+</body>
+</html>
