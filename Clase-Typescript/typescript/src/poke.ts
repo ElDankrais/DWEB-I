@@ -4,9 +4,14 @@ interface PokemonType {
     };
 }
 
+interface PokemonImage {
+    front_default: string
+}
+
 interface PokemonData {
     name: string;
     types: PokemonType[];
+    sprites: PokemonImage;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -32,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .then((data: PokemonData) => {
             result.innerHTML = `
             <h2>${data.name.toUpperCase()}</h2>
+            <img src="${data.sprites.front_default}" alt="${data.name}">
             <p>Tipo: ${data.types.map((t) => t.type.name).join(", ")}</p>
             `;
         })
