@@ -17,23 +17,24 @@
       max-width: 100%;
     }
   </style>
-  <script type="module">
+  <script defer type="module">
     fetch('http://localhost:1234/movies')
       .then(res => res.json())
       .then(movies => {
+        console.log(movies);  
         const html = movies.map(movie => {
           return `
-            <article data-id="${movie.id}">
+          <article data-id="${movie.id}">
               <h2>${movie.title}</h2>
               <img src="${movie.poster}" alt="${movie.title}">
               <p>${movie.year}</p>
 
               <button>Eliminar</button>
-            </article>
+          </article>
           `
         }).join('')
-
-        document.querySelector('main').innerHTML = html
+        console.log(html);
+        document.querySelector('main').innerHTML = html;
 
         document.addEventListener('click', e => {
           if (e.target.matches('button')) {
@@ -43,16 +44,13 @@
             fetch(`http://localhost:1234/movies/${id}`, {
               method: 'DELETE'
             })
-              .then(res => {
-                if (res.ok) {
-                  article.remove()
-                }
+              .then(response => response.json())
+              .then(data => {
+                article.remove();
               })
           }
         })
       })
-  </script>
-    
   </script>
 </head>
 <body>
