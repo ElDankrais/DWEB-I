@@ -4,6 +4,61 @@
 <head>
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Socket.IO chat</title>
+  <script type="module">
+    import { io } from 'https://cdn.socket.io/4.3.2/socket.io.esm.min.js'
+
+    const getUsername = async () => {
+      const activeUserName = localStorage.getItem('username')
+
+      if (activeUserName) {
+        console.log('Eureka, hay sesión');
+        return activeUserName
+      }
+
+      const apiKey = 'I7wd/+ipADQYLouizW07VQ==34uo02eGZvhPktB9';
+
+      const res = await fetch("https://api.api-ninjas.com/v1/randomuser", {
+        method: "GET",
+        headers: {
+          "X-Api-Key": "I7wd/+ipADQYLouizW07VQ==34uo02eGZvhPktB9"
+        }
+      })
+
+      const { username } = await res.json()
+
+      localStorage.setItem('username', username)
+      return username
+    }
+
+    const socket = io({
+      auth: {
+        username: await getUsername()
+      }
+    });
+
+    const form = document.getElementById('form');
+    const input = document.getElementById('input');
+    const messages = document.getElementById('messages');
+
+    socket.on('Chanci dijo', (msg, username) => {
+      const message = `<li>
+        <p>${msg}</p>
+        <small>${username}</small>
+      </li>`;
+      console.log(msg);
+      
+      messages.insertAdjacentHTML('beforeend', message);
+    })
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      if (input.value) {
+        socket.emit('Chanci dijo', input.value);
+        input.value = ''
+      }
+    })
+  </script>
     <style>
         *,
         *::before,
