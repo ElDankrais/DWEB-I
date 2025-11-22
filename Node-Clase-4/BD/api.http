@@ -2,7 +2,7 @@
 GET http://localhost:1234/movies
 
 ### Recuperar una película por id
-GET http://localhost:1234/movies/e4f21c7e-6d20-11ef-b527-10c198b5c2ae
+GET http://localhost:1234/movies/a563a364-c7ad-11f0-bd08-2c75c47708c1
 
 ### Recuperar todas las películas por un género
 GET http://localhost:1234/movies?genre=ACTION
@@ -12,7 +12,6 @@ POST http://localhost:1234/movies
 Content-Type: application/json
 
 {
-  "sql": "SELECT * FROM users",
   "title": "The Godfather",
   "year": 1975,
   "director": "Francis Ford Coppola",
