@@ -1,0 +1,21 @@
+{
+  "name": "web-socket",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --watch ./server/index.js",
+    "dev-starter": "node --watch ./server/starter.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@libsql/client": "^0.11.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "morgan": "1.10.0",
+    "socket.io": "4.7.5"
+  }
+}
